@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>学生お得情報ナビ｜学生生活をもっとお得に</title>
+  <meta name="description" content="学生のうちに知っておきたい学割、節約、資格、サブスク、アルバイトなどのお得情報を紹介します。">
+  <style>
+    :root{
+      --ink:#203040; --muted:#667788; --line:#e7edf2; --bg:#f7fafc;
+      --primary:#2f7df6; --primary-dark:#1f62cf; --card:#fff;
+      --radius:18px; --shadow:0 8px 28px rgba(32,48,64,.08);
+    }
+    *{box-sizing:border-box}
+    body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Hiragino Kaku Gothic ProN","Yu Gothic",Meiryo,sans-serif;color:var(--ink);background:var(--bg);line-height:1.7}
+    a{color:inherit;text-decoration:none}
+    .container{width:min(1100px,calc(100% - 32px));margin:auto}
+    header{background:#fff;border-bottom:1px solid var(--line);position:sticky;top:0;z-index:10}
+    .nav{height:70px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+    .logo{font-size:20px;font-weight:800;letter-spacing:.02em}
+    .logo span{color:var(--primary)}
+    nav{display:flex;gap:22px;font-size:14px;font-weight:700}
+    nav a:hover{color:var(--primary)}
+    .hero{padding:72px 0 62px;background:linear-gradient(135deg,#eef6ff 0%,#fff 58%,#f2fbff 100%)}
+    .hero-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:42px;align-items:center}
+    .eyebrow{display:inline-block;background:#e4f0ff;color:var(--primary-dark);font-size:13px;font-weight:800;padding:6px 12px;border-radius:999px}
+    h1{font-size:clamp(34px,5vw,56px);line-height:1.2;margin:18px 0 18px;letter-spacing:-.04em}
+    .lead{font-size:18px;color:var(--muted);margin:0 0 28px}
+    .buttons{display:flex;gap:12px;flex-wrap:wrap}
+    .btn{display:inline-flex;align-items:center;justify-content:center;padding:12px 18px;border-radius:12px;font-weight:800;border:1px solid var(--line);background:#fff}
+    .btn.primary{background:var(--primary);border-color:var(--primary);color:#fff}
+    .btn.primary:hover{background:var(--primary-dark)}
+    .hero-card{background:#fff;border:1px solid var(--line);border-radius:24px;padding:28px;box-shadow:var(--shadow)}
+    .hero-card h2{margin:0 0 18px;font-size:20px}
+    .quick{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+    .quick a{padding:16px;border:1px solid var(--line);border-radius:14px;background:#fbfdff;font-weight:800}
+    .quick a:hover{border-color:#a9c9ff;transform:translateY(-1px)}
+    section{padding:58px 0}
+    .section-head{display:flex;justify-content:space-between;align-items:end;gap:20px;margin-bottom:24px}
+    h2{font-size:28px;line-height:1.3;margin:0}
+    .section-head p{margin:0;color:var(--muted);font-size:14px}
+    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:22px;box-shadow:0 4px 18px rgba(32,48,64,.04)}
+    .card .icon{font-size:30px}
+    .card h3{margin:12px 0 7px;font-size:18px}
+    .card p{margin:0;color:var(--muted);font-size:14px}
+    .articles{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .article{background:#fff;border:1px solid var(--line);border-radius:var(--radius);overflow:hidden}
+    .thumb{height:135px;background:linear-gradient(135deg,#dcebff,#f5faff);display:flex;align-items:center;justify-content:center;font-size:42px}
+    .article-body{padding:19px}
+    .tag{font-size:12px;color:var(--primary-dark);font-weight:800}
+    .article h3{font-size:17px;line-height:1.5;margin:8px 0}
+    .article p{font-size:13px;color:var(--muted);margin:0}
+    .cta{background:#1f3347;color:#fff;border-radius:24px;padding:38px 34px;display:flex;align-items:center;justify-content:space-between;gap:24px}
+    .cta h2{font-size:26px}.cta p{color:#d8e2ea;margin:8px 0 0}
+    .cta .btn{background:#fff;border-color:#fff;color:#203040;white-space:nowrap}
+    footer{background:#172634;color:#c8d2da;margin-top:20px}
+    .footer{padding:36px 0;display:flex;justify-content:space-between;gap:30px}
+    .footer strong{color:#fff}
+    .small{font-size:12px;color:#9fb0bd}
+    @media(max-width:800px){
+      nav{display:none}.hero{padding:52px 0}.hero-grid{grid-template-columns:1fr}
+      .grid,.articles{grid-template-columns:1fr 1fr}
+      .cta{display:block}.cta .btn{margin-top:20px}
+    }
+    @media(max-width:520px){
+      .container{width:min(100% - 22px,1100px)}
+      .grid,.articles,.quick{grid-template-columns:1fr}
+      h1{font-size:36px}.lead{font-size:16px}
+      section{padding:44px 0}.footer{display:block}
+    }
+  </style>
+</head>
+<body>
+<header>
+  <div class="container nav">
+    <a class="logo" href="#"><span>学生</span>お得情報ナビ</a>
+    <nav>
+      <a href="#category">カテゴリー</a>
+      <a href="#articles">記事</a>
+      <a href="#about">このサイトについて</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="container hero-grid">
+      <div>
+        <span class="eyebrow">学生生活をもっとお得に</span>
+        <h1>知らないだけで損してる？<br>学生向けお得情報をまとめました。</h1>
+        <p class="lead">学割・節約・資格・サブスク・アルバイトなど、学生のうちに知っておきたい情報をわかりやすく紹介します。</p>
+        <div class="buttons">
+          <a class="btn primary" href="#articles">おすすめ記事を見る</a>
+          <a class="btn" href="#category">カテゴリーを見る</a>
+        </div>
+      </div>
+      <div class="hero-card">
+        <h2>🔎 まずはここから</h2>
+        <div class="quick">
+          <a href="#articles">🎓 学割</a>
+          <a href="#articles">💰 節約</a>
+          <a href="#articles">📚 資格</a>
+          <a href="#articles">💼 バイト・仕事</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="category">
+    <div class="container">
+      <div class="section-head">
+        <div><h2>カテゴリー</h2><p>気になるテーマから探せます。</p></div>
+      </div>
+      <div class="grid">
+        <a class="card" href="#articles"><div class="icon">🎓</div><h3>学割・学生サービス</h3><p>学生限定の割引や便利なサービス。</p></a>
+        <a class="card" href="#articles"><div class="icon">💰</div><h3>節約・お金</h3><p>学生生活の出費を抑える方法。</p></a>
+        <a class="card" href="#articles"><div class="icon">📚</div><h3>資格・勉強</h3><p>学生のうちに挑戦したい資格や勉強法。</p></a>
+        <a class="card" href="#articles"><div class="icon">📱</div><h3>サブスク</h3><p>学生向けプランやお得な使い方。</p></a>
+        <a class="card" href="#articles"><div class="icon">💼</div><h3>バイト・仕事</h3><p>アルバイトや仕事探しに役立つ情報。</p></a>
+        <a class="card" href="#articles"><div class="icon">✈️</div><h3>旅行・お出かけ</h3><p>学生旅行をお得に楽しむアイデア。</p></a>
+      </div>
+    </div>
+  </section>
+
+  <section id="articles">
+    <div class="container">
+      <div class="section-head">
+        <div><h2>おすすめ記事</h2><p>※現在はサイト見本です。</p></div>
+      </div>
+      <div class="articles">
+        <a class="article" href="#"><div class="thumb">🎓</div><div class="article-body"><span class="tag">学割</span><h3>学生のうちに使っておきたい学割10選</h3><p>交通・動画・買い物など、学生向けサービスをチェック。</p></div></a>
+        <a class="article" href="#"><div class="thumb">💰</div><div class="article-body"><span class="tag">節約</span><h3>学生生活で年間1万円以上節約する方法</h3><p>毎月の固定費や日常の支出を見直すポイント。</p></div></a>
+        <a class="article" href="#"><div class="thumb">📚</div><div class="article-body"><span class="tag">資格</span><h3>学生のうちに取っておきたい資格5選</h3><p>就職やスキルアップにつながる資格を紹介。</p></div></a>
+      </div>
+    </div>
+  </section>
+
+  <section id="about">
+    <div class="container">
+      <div class="cta">
+        <div>
+          <h2>学生だから使えるお得を、見逃さない。</h2>
+          <p>このサイトでは、学生生活に役立つ情報をわかりやすく整理していきます。</p>
+        </div>
+        <a class="btn" href="#articles">記事をチェック</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="container footer">
+    <div><strong>学生お得情報ナビ</strong><div class="small">学生生活をもっとお得に。</div></div>
+    <div class="small">© 2026 学生お得情報ナビ</div>
+  </div>
+</footer>
+</body>
+</html>
